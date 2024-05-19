@@ -1,0 +1,13 @@
+<!-- add_liability.html -->
+<h2>Liability</h2>
+
+<h3>Add New Liability</h3>
+<form method="post" action="{{ url_for('add_liability') }}">
+    <input type="hidden" name="action" value="add_category">
+    <label for="liability_name">Liability Name:</label>
+    <input type="text" id="liability_name" name="liability_name" required>
+    <label for="liability_amount">Amount:</label>
+    <input type="number" id="liability_amount" name="liability_amount" step="0.01" required>
+    <button type="submit">Add Liability</button>
+</form>
+</ul>

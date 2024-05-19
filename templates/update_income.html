@@ -1,0 +1,16 @@
+<!-- update_income_category.html -->
+<h2>Update Income</h2>
+<form method="post" action="{{ url_for('update_income', category_id=category._id) }}" enctype="multipart/form-data">
+    <label for="income_name">Income Name:</label>
+    <input type="text" id="income_name" name="income_name" value="{{ category.income_name }}" required>
+    <label for="income_category">Income Category:</label>
+    <select id="income_category" name="income_category" required>
+        <option value="EarnedIncome" {% if category.income_category == 'EarnedIncome' %} selected {% endif %}>EarnedIncome</option>
+        <option value="PassiveIncome" {% if category.income_category == 'PassiveIncome' %} selected {% endif %}>PassiveIncome</option>
+        <option value="PortfolioIncome" {% if category.income_category == 'PortfolioIncome' %} selected {% endif %}>PortfolioIncome</option>
+        <!-- Add more options as needed -->
+    </select>    
+    <label for="income_amount">Amount:</label>
+    <input type="number" id="income_amount" name="income_amount" value="{{ category.income_amount }}" step="0.01" required>
+    <button type="submit">Update Category</button>
+</form>

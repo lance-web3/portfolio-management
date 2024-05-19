@@ -1,0 +1,73 @@
+.income-expense-chart-container {
+    position: relative; /* Makes the chart responsive */
+    height: 40vh; /* You can adjust as necessary */
+    width: 80vw; /* You can adjust as necessary */
+    max-height: 500px; /* Sets a max height */
+    max-width: 600px; /* Sets a max width */          
+}
+
+.chart-container {
+    position: relative; /* Makes the chart responsive */
+    height: 40vh; /* You can adjust as necessary */
+    width: 80vw; /* You can adjust as necessary */
+    max-height: 500px; /* Sets a max height */
+    max-width: 600px; /* Sets a max width */
+    display: flex; /* Added to use flexbox */
+    justify-content: center; /* Horizontally center the canvas */
+    align-items: center; /* Vertically center the canvas */
+    margin: auto; /* Centers the container if it's smaller than the column */            
+}
+
+/* Sidebar styles */
+.bg-light {
+    background-color: #f8f9fa!important;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 48px 0 0; /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.nav-link.active {
+    color: #007bff;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 48px 0 0; /* Top padding accounts for navbar if present */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: static;
+        height: auto;
+    }
+}

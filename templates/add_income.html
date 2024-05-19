@@ -1,0 +1,19 @@
+<!-- income.html -->
+<h2>Income</h2>
+
+<h3>Add New Income</h3>
+<form method="post" action="{{ url_for('add_income') }}">
+    <input type="hidden" name="action" value="add_category">
+    <label for="income_name">Income Name:</label>
+    <input type="text" id="income_name" name="income_name" required>
+    <label for="income_category">Income Category:</label>
+    <select id="income_category" name="income_category" required>
+        <option value="EarnedIncome">Earned Income</option>
+        <option value="PassiveIncome">Passive Income</option>
+        <option value="PortfolioIncome">Portfolio Income</option>
+    </select>
+    <label for="income_amount">Amount:</label>
+    <input type="number" id="income_amount" name="income_amount" step="0.01" required>
+    <button type="submit">Add Income</button>
+</form>
+</ul>

@@ -1,0 +1,9 @@
+<!-- update_liability.html -->
+<h2>Update Liability</h2>
+<form method="post" action="{{ url_for('update_liability', liability_id=category._id) }}" enctype="multipart/form-data">
+    <label for="liability_name">Liability Name:</label>
+    <input type="text" id="liability_name" name="liability_name" value="{{ category.liability_name }}" required>   
+    <label for="liability_amount">Amount:</label>
+    <input type="number" id="liability_amount" name="liability_amount" value="{{ category.liability_amount }}" step="0.01" required>
+    <button type="submit">Update Liability</button>
+</form>

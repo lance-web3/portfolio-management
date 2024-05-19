@@ -1,0 +1,9 @@
+<!-- update_expenses.html -->
+<h2>Update Expenses</h2>
+<form method="post" action="{{ url_for('update_expenses', expenses_id=category._id) }}" enctype="multipart/form-data">
+    <label for="expenses_name">Expenses Name:</label>
+    <input type="text" id="expenses_name" name="expenses_name" value="{{ category.expenses_name }}" required>   
+    <label for="expenses_amount">Amount:</label>
+    <input type="number" id="expenses_amount" name="expenses_amount" value="{{ category.expenses_amount }}" step="0.01" required>
+    <button type="submit">Update Expenses</button>
+</form>

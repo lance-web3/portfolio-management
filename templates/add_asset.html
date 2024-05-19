@@ -1,0 +1,13 @@
+<!-- add_expenses.html -->
+<h2>Asset</h2>
+
+<h3>Add New Asset</h3>
+<form method="post" action="{{ url_for('add_asset') }}">
+    <input type="hidden" name="action" value="add_category">
+    <label for="asset_name">Asset Name:</label>
+    <input type="text" id="asset_name" name="asset_name" required>
+    <label for="asset_amount">Amount:</label>
+    <input type="number" id="asset_amount" name="asset_amount" step="0.01" required>
+    <button type="submit">Add Asset</button>
+</form>
+</ul>
